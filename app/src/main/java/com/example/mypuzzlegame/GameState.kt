@@ -1,17 +1,20 @@
 package com.example.mypuzzlegame
 
-import androidx.compose.foundation.gestures.Orientation
+import android.content.Context
 import androidx.compose.ui.graphics.ImageBitmap
-import java.util.Collections.list
 
 //使用viewModel存储状态
 
 data class GameState(
     val puzzle: List<ImageBitmap?> = emptyList(),
-    val orientations: List<Orientation> = List(puzzle.size) {Orientation.Horizontal},
+    val randomPuzzle: List<ImageBitmap?> = emptyList(),
     val isGameOver: Boolean = false,
+    val showPhoto: Boolean = false,
+    val showDiffer: Boolean = false,
     val partSize:Float = 0f,
     val puzzleNumber: Int = 3,
-    val emptyIndex: Int = puzzleNumber * puzzleNumber - 1,
-    val showPhoto: Boolean = false
+    val image: String = "",
+    val start: Int = 0,
+    val showOption: Boolean = false,
+    val screenSize: Int = 0,
 )

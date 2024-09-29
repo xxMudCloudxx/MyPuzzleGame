@@ -36,11 +36,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.klotskigame.BUttonVer
 import com.example.klotskigame.ButtonHor
 import com.example.klotskigame.ImgPartSize
@@ -61,7 +63,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize().padding(),
                     color = backgroundColor
                 ) {
-                    GameFace()
+                    val viewModel = viewModel<GameViewModel>()
+                    val state = viewModel.state
+                    GameFace(state = state,onEvents = viewModel::onEvents)
                 }
             }
         }

@@ -17,8 +17,12 @@ val HalfPartSize = 60.dp
 val HalfPartSizeInt = 60f
 
 val TextColor = Color(119, 110, 101, 255)
+val TextRed = Color(119, 101, 101, 255)
 val InTextColor = Color(246, 240, 229,  255)
 val backgroundColor = Color(238, 235, 218,  255)
-val backgroundColor2 = Color(224, 221, 195, 255)
+val backgroundColor2 = Color(0xFFF5F3E9)
 
 val ButtonColor = Color(147, 131, 117, 255)
+
+val blank = Color(0x00000000)
+

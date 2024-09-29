@@ -67,6 +67,11 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+//用于compose权限的使用
+    implementation(libs.accompanist.permissions)
+//闪光
+    implementation(libs.accompanist.placeholder.material)
+    implementation("io.coil-kt:coil-compose:2.2.2")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
 }
